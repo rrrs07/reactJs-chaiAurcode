@@ -29,6 +29,8 @@ function App() {
   },//for optimization
    [length, numberAllowed, charAllowed, setPassword])
 
+
+   // to copy the password using useRef(used when ay reference is taken)
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 99);

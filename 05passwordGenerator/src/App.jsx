@@ -23,10 +23,11 @@ function App() {
       
     }
 
-    setPassword(pass)
+    setPassword(pass) 
 
 
-  }, [length, numberAllowed, charAllowed, setPassword])
+  },//for optimization
+   [length, numberAllowed, charAllowed, setPassword])
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select();
@@ -34,6 +35,8 @@ function App() {
     window.navigator.clipboard.writeText(password)
   }, [password])
 
+
+  // run every time when any changes done
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
@@ -50,7 +53,7 @@ function App() {
             readOnly
             ref={passwordRef}
         />
-        <button
+        <button 
         onClick={copyPasswordToClipboard}
         className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
         >copy</button>

@@ -3,15 +3,16 @@ import React from 'react'
 import './App.css'
 import Sidebar from './components/sidebar/Sidebar'
 import Home from './components/home/Home'
-import Portfolio from './components/portfolio/Portfolio'
+
 import Resume from './components/resume/Resume'
 import Contact from './components/contact/Contact'
 import About from './components/about/About'
-import Projects from './components/projects/Projects'
+import Projects from './components/projects/Project'
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  //const [count, setCount] = useState(0)
 
   return (
     <>
@@ -21,7 +22,6 @@ function App() {
       <About />
       <Projects />
       <Resume />
-      <Portfolio />
       <Contact />
       
 
